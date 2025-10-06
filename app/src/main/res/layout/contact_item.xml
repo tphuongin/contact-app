@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:backgroundTint="#FFF0F5"
+    android:elevation="5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/siv_avatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar_default"
+        app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="80dp"
+        android:text="T Phương"
+        android:textSize="25dp" />
+
+
+</androidx.cardview.widget.CardView>

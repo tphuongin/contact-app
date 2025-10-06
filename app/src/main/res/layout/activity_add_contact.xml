@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddContactActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#F8C8DC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Create new contact"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toEndOf="@id/iv_close"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="SAVE"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/avatar_default"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <ImageView
+        android:id="@+id/ic_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toBottomOf="@id/iv_avatar"
+        app:layout_constraintEnd_toEndOf="@id/tv_save" />
+
+    <ImageView
+        android:id="@+id/ic_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_device"
+        app:layout_constraintStart_toStartOf="@id/iv_close"
+        app:layout_constraintTop_toTopOf="@id/tv_save_to" />
+
+    <TextView
+        android:id="@+id/tv_save_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="Saving to"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/ic_phone"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar" />
+
+    <TextView
+        android:id="@+id/tv_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Device"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/tv_save_to"
+        app:layout_constraintTop_toBottomOf="@id/tv_save_to" />
+
+    <ImageView
+        android:id="@+id/ic_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="@id/iv_close"
+        app:layout_constraintTop_toBottomOf="@id/ic_phone" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ic_user"
+        app:layout_constraintEnd_toEndOf="@id/tv_save"
+        app:layout_constraintStart_toStartOf="@id/tv_save_to" />
+
+    <ImageView
+        android:id="@+id/ic_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_call"
+        app:layout_constraintStart_toStartOf="@id/iv_close"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ic_call"
+        app:layout_constraintEnd_toEndOf="@id/tv_save"
+        app:layout_constraintStart_toStartOf="@id/tv_save_to" />
+
+
+    <ImageView
+        android:id="@+id/ic_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_mail"
+        app:layout_constraintStart_toStartOf="@id/iv_close"
+        app:layout_constraintTop_toBottomOf="@id/et_phone" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Mail"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/ic_mail"
+        app:layout_constraintEnd_toEndOf="@id/tv_save"
+        app:layout_constraintStart_toStartOf="@id/tv_save_to" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
